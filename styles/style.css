@@ -1,5 +1,8 @@
 /* ESTILO GERAL */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -63,18 +66,73 @@ header a{
     display: inline-block;
     transition: .2s;
 }
-header a:hover{
+header nav.menu-desktop a:hover{
     color: #f5f5f5;
     transform: scale(1.2);
 }
 header nav ul{
     list-style-type: none;
 }
-header nav li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
 }
+/* menu */
+.btn-abrir-menu i{
+    color: #85E4FF;
+    font-size: 50px;
 
+}
+.menu-mobile{
+    background-color: #0E2A56;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav li a{
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+.menu-mobile nav li a:hover{
+    background-color: #85E4FF;
+    color: #0E2A56;
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile .btn-fechar i{
+    color: #85E4FF;
+    font-size: 50px;
+}
+.overlay-menu{
+    background-color: #0e2a568f;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
+    display: none;
+}
 
 /* ESTILO DO TOPO DO SITE */
 
@@ -153,35 +211,56 @@ section.especialidades .flex{
 
 }
 /* SOBRE */
-section.sobre{
+section.sobre {
     padding: 65px 4%;
 }
 
-.sobre .flex{
+.sobre .interface {
+    display: flex;
+    justify-content: space-between; /* Garante que a imagem e o texto fiquem em linha */
+    align-items: center;
+}
+
+.sobre .flex {
+    display: flex;
     align-items: center;
     gap: 60px;
 }
 
-.sobre .txt-sobre{
-    color: #f5f5f5;
-
+.sobre .img-sobre img {
+    width: 200px;  /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Deixa a imagem arredondada */
+    border: 5px solid #85E4FF; /* Pode ser ajustado ou removido */
 }
 
-.sobre .txt-sobre h1{
+.sobre .txt-sobre {
+    color: #f5f5f5;
+    max-width: 600px; /* Limita a largura do texto */
+}
+
+.sobre .txt-sobre h1 {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 30px;
 }
 
-.sobre .txt-sobre h1 span{
+.sobre .txt-sobre h1 span {
     color: #85E4FF;
     display: block;
 }
+
 .sobre .txt-sobre p {
     margin: 20px 0;
     text-align: justify;
 }
-.btn-social button{
+
+.btn-social {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-social button {
     color: #0E2A56;
     width: 60px;
     height: 60px;
@@ -193,11 +272,21 @@ section.sobre{
     cursor: pointer;
     transition: .2s;
 }
-#sobre{
-    width: 300px;
+
+.btn-social button:hover {
+    background-color: #0E2A56;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Ajuste no #sobre */
+#sobre {
+    margin: 40px 4%;
+    width: 100%; /* Ajuste o tamanho conforme necessário */
     border: none;
     border-radius: 30px;
 }
+
 /* PORTFOLIO */
 section.portfolio{
     padding: 80px 4%;
@@ -320,6 +409,9 @@ footer .line-footer p a{
     width: 150px;
 }
 
+.btn-abrir-menu{
+    display: none;
+}
 @media screen and (max-width: 1020px){
     /* geral */
     
@@ -386,6 +478,14 @@ footer .line-footer p a{
     }
     footer .line-footer{
         text-align: center;
+    }
+    .btn-abrir-menu{
+        display: block;
+    }
+    #sobre{
+       
+        max-width: 360px;
+        margin: 0 auto;
     }
 
 
