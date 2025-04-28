@@ -1,62 +1,93 @@
-section.formulario {
-    padding: 80px 4%;
+/* ESTILO GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
 }
 
-section.formulario .interface {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0E2A56;
+    color: #f5f5f5;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-form {
-    margin-top: 40px;
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form input, form textarea {
-    width: 100%;
-    background-color: #f5f5f5;
-    border: none;
-    outline: none;
-    padding: 20px 15px;
-    border-radius: 15px;
-    font-size: 16px;
-    color: #0E2A56;
-    transition: 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    box-shadow: 0 0 8px #85E4FF;
-}
-
-form textarea {
-    resize: none;
-    min-height: 150px;
-}
-
-form .btn-enviar {
     text-align: center;
 }
 
-form .btn-enviar input {
-    width: 150px;
-    background-color: #85E4FF;
-    color: #0E2A56;
-    font-weight: 700;
-    border: none;
-    border-radius: 30px;
-    padding: 15px;
-    cursor: pointer;
-    transition: .3s;
+h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    color: #85E4FF;
+    margin-bottom: 20px;
 }
 
-form .btn-enviar input:hover {
-    background-color: #0E2A56;
-    color: #85E4FF;
-    box-shadow: 0px 0px 8px #85e5ffb9;
+p {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: #f5f5f5;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+
+h1,
+p {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+button {
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #85E4FF;
+    color: #0E2A56;
+    cursor: pointer;
+    border: 0;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(133, 228, 255, 0.7);
     transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1020px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+    }
 }
