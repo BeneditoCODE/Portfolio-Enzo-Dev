@@ -217,7 +217,7 @@ section.sobre {
 
 .sobre .interface {
     display: flex;
-    justify-content: space-between; /* Garante que a imagem e o texto fiquem em linha */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -228,15 +228,15 @@ section.sobre {
 }
 
 .sobre .img-sobre img {
-    width: 200px;  /* Ajuste o tamanho da imagem conforme necessário */
+    width: 200px;  
     height: auto;
-    border-radius: 50%; /* Deixa a imagem arredondada */
-    border: 5px solid #85E4FF; /* Pode ser ajustado ou removido */
+    border-radius: 50%; 
+    border: 5px solid #85E4FF; 
 }
 
 .sobre .txt-sobre {
     color: #f5f5f5;
-    max-width: 600px; /* Limita a largura do texto */
+    max-width: 600px; 
 }
 
 .sobre .txt-sobre h1 {
@@ -282,7 +282,7 @@ section.sobre {
 /* Ajuste no #sobre */
 #sobre {
     margin: 40px 4%;
-    width: 100%; /* Ajuste o tamanho conforme necessário */
+    width: 100%; 
     border: none;
     border-radius: 30px;
 }
@@ -291,6 +291,7 @@ section.sobre {
 section.portfolio{
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #85e5ff2f;
+    
 }
 section.portfolio .flex{
     justify-content: space-around;
@@ -330,6 +331,12 @@ section.portfolio h2{
 }
 .overlay:hover{
     opacity: 100%;
+}
+
+.portfolio a{
+    text-decoration: none;
+    color: #0E2A56;
+
 }
 /* FORM */
 
