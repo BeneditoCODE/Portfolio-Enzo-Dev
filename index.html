@@ -31,7 +31,8 @@
                 </ul>
             </nav>
             <div class="btn-contato">
-                <a href="https://api.whatsapp.com/send?phone=5586999857004&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20voc%C3%AA." target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=5586999857004&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20voc%C3%AA."
+                    target="_blank">
                     <button>Contato</button>
                 </a>
             </div>
@@ -68,7 +69,8 @@
                             busca qualidade, criatividade e resultados, está no lugar certo.
                             Vamos transformar suas ideias em realidade!</p>
                         <div class="btn-contato">
-                            <a href="https://api.whatsapp.com/send?phone=5586999857004&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20voc%C3%AA." target="_blank">
+                            <a href="https://api.whatsapp.com/send?phone=5586999857004&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20voc%C3%AA."
+                                target="_blank">
                                 <button>Entre em Contato</button>
                             </a>
                         </div>
@@ -145,7 +147,9 @@
                         <div class="overlay"><a href="">Plataforma DevIniciante</a></div>
                     </div>
                     <div class="img-port" style="background-image: url(./img/3.png);">
-                        <div class="overlay"><a href="https://www.figma.com/proto/XX5vZVYCth0tezNZ9tq7Si/AVENTURISMO?node-id=0-1&t=ahF69UMiQzqU2NAj-1">Plataforma AvenTurismo</a></div>
+                        <div class="overlay"><a
+                                href="https://www.figma.com/proto/XX5vZVYCth0tezNZ9tq7Si/AVENTURISMO?node-id=0-1&t=ahF69UMiQzqU2NAj-1">Plataforma
+                                AvenTurismo</a></div>
                     </div>
                 </div>
             </div>
@@ -154,15 +158,16 @@
             <div class="interface">
                 <h2 class="titulo">FALA<span> COMIGO.</span></h2>
                 <form action="https://formsubmit.co/enzobenedito95@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://beneditocode.github.io/Portfolio-Enzo-Dev/obrigado.html">
+                    <input type="hidden" name="_next"
+                        value="https://beneditocode.github.io/Portfolio-Enzo-Dev/obrigado.html">
                     <input type="hidden" name="_subject" value="Novo Contato via Portfólio!">
                     <input type="hidden" name="_captcha" value="false">
-        
+
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo é ?" required>
                     <input type="email" name="email" id="email" placeholder="Qual o seu melhor e-mail ?" required>
                     <input type="number" name="telefone" id="telefone" placeholder="Seu Whatsapp ?">
                     <textarea name="mensagem" id="mensagem" placeholder="Do que você precisa ?" required></textarea>
-        
+
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
             </div>
@@ -193,6 +198,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('click', function (e) {
+            const effect = document.createElement('span');
+            effect.classList.add('click-effect');
+            effect.style.left = e.pageX + 'px';
+            effect.style.top = e.pageY + 'px';
+            document.body.appendChild(effect);
+
+            // Remove depois da animação
+            setTimeout(() => effect.remove(), 600);
+        });
+    </script>
+
 </body>
 
 </html>
